@@ -419,7 +419,7 @@ plot.polygonGrid <- function(x,type="l",add=FALSE,...){
     attr(x,"polygons") <- g
     class(x) <- c("polygonGrid","data.frame")
   } else {
-    warning("Loosing neighborhood and polygon information")
+    ## warning("Losing neighborhood and polygon information")
   }
   x
 }
