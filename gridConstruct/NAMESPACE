@@ -12,4 +12,4 @@ import(
 )
 
 ##
-useDynLib(lgc, .registration = TRUE, .fixes = "lgc_")
+useDynLib(gridConstruct)
