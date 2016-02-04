@@ -207,21 +207,6 @@ scatterGrid <- function(data,sample.id){
   i <- tapply(seq(length=nrow(data)),id,function(x)x[1])
   data[i,,drop=FALSE]
 }
-.lgc_distances <- list(dist.km=function(x)dist.km(x),
-                       dist.time=function(x)stats::dist(x$abstime),
-                       I=function(x)diag(nrow(x))
-                       )
-setAs("gridFactor", "distFactor",
-      function(from, to ){
-        grid <- levelAttrib(from)$grid
-        fun <- function(f)try(as.matrix(f(grid)),TRUE)
-        dist <- lapply(.lgc_distances,fun)
-        attr(dist, "Dim") <- nrow(grid)
-        levelAttrib(from)$dist <- dist
-        class(from) <- c("distFactor", class(from))
-        from
-      })
-
 
 wetEdgeFilter <- function(grid,wettol=0.1,edgeDiscretize=11,...){
   Q <- attr(grid,"pattern")
