@@ -55,7 +55,8 @@ gridConstruct <- function(data,type=
 ##' @param nearestObs Remove grid points with closest data point greater than \code{nearestObs}.
 ##' @param wet Remove grid points on land.
 ##' @param wetEdges Alternative: Keep edges passing through water. 
-##' @param ordertol Require at least \code{ordertol} neighbors to every grid point. 
+##' @param ordertol Require at least \code{ordertol} neighbors to every grid point.
+##' @param connected Keep only largest connected component.
 ##' @return Filtered grid object
 ##' @rdname grid
 gridFilter <- function(grid,data,
