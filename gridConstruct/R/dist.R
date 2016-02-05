@@ -17,21 +17,3 @@ dist.km <- function(data1,data2=data1,outer=TRUE){
   d2 <- lapply(d2,rep,each=n1)
   matrix(distkm(d1$lon,d1$lat,d2$lon,d2$lat),n1)
 }
-
-## Function to compute euclidian distance
-dist.simple <- function(data){
-  d <- data[c("lon","lat")]
-  as.matrix(dist(d))
-}
-
-dist.all <- function(data){
-  delayedAssign("dist",dist.km(data))
-  timevar <- match(c("abstime","time"),names(data))
-  timevar <- timevar[!is.na(timevar)][1]
-  delayedAssign("dist.time",as.matrix(stats::dist(data$time)))
-  delayedAssign("IdMat",diag(nrow(dist)))
-  delayedAssign("dist.lon",as.matrix(stats::dist(data$lon)))
-  delayedAssign("dist.lat",as.matrix(stats::dist(data$lat)))
-  environment()
-}
-
