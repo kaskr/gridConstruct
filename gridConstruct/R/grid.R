@@ -1,14 +1,6 @@
 ##' \code{gridConstruct} constructs a grid.
 ##'
-##' These functions help to construct the object required to
-##' build Gaussian Markov Random fields with the formula interface.
-##' Most situations can be handled by
-##' \enumerate{
-##' \item Creating a grid using \code{grid <- gridConstruct(data)}.
-##' \item Building a gridFactor object using \code{gridFactor(data,grid)}.
-##' }
-##' 
-##' Construction of grids in practice generally involves 3 steps:
+##' Construction of grids generally involves three steps:
 ##' \enumerate{
 ##' \item \code{gridConstruct} - Construct the grid sufficiently fine and
 ##' sufficiently large to contain all data points.
@@ -23,7 +15,6 @@
 ##' @param data data.frame.
 ##' @param type Neighborhood structure type.
 ##' @param filter Call \code{gridFilter} after grid construction?
-##' @param ...
 ##' @param center Optional list to control origo of grid.
 ##' @param km Optional distance between neighboring grid points in km.
 ##' @return grid object
@@ -170,6 +161,7 @@ gridLocate <- function(grid,points){
 
 
 ##' \code{gridFactor} constructs a gridFactor object.
+##' @param ...
 ##' @rdname grid
 gridFactor <- function(data,grid,...){
   data <- data[c("lon","lat")]
