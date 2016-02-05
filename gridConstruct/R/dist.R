@@ -1,8 +1,8 @@
- distkm <- function (lon1, lat1, lon2, lat2) 
-.Call("distkm", lon1, lat1, lon2, lat2, PACKAGE = "gridConstruct")
+distkm <- function (lon1, lat1, lon2, lat2)
+    .Call("distkm", lon1, lat1, lon2, lat2, PACKAGE = "gridConstruct")
 
- nearestkm <- function (lon1, lat1, lon2, lat2) 
-.Call("nearestkm", lon1, lat1, lon2, lat2, PACKAGE = "gridConstruct")
+nearestkm <- function (lon1, lat1, lon2, lat2)
+    .Call("nearestkm", lon1, lat1, lon2, lat2, PACKAGE = "gridConstruct")
 
 ## Function to compute distance between positions in km.
 ## default: outer=TRUE ===> return a distance-matrix
