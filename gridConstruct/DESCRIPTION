@@ -7,7 +7,7 @@ Author: Kasper Kristensen
 Maintainer: Kasper Kristensen <kaskr@dtu.dk>
 Description: Construct grids for spatial models based on DATRAS datasets.
 License: GPL-2
-Depends: R (>= 3.0.0), Matrix (>= 1.0-12)
+Depends: R (>= 3.0.0), Matrix (>= 1.0-12), sp
 Suggests:
     maps,
     mapdata,
