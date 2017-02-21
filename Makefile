@@ -22,3 +22,6 @@ unexport TEXINPUTS
 pdf:
 	rm -f $(PACKAGE).pdf
 	R CMD Rd2pdf --no-preview $(PACKAGE)
+
+shp-update:
+	R --slave < shp-update.R
