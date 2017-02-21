@@ -1,3 +1,5 @@
 library(rgdal)
 Europe <- readOGR("shpfiles/Europe", "Kystlinie")
+new_proj <- sub("units=m", "units=km", proj4string(Europe))
+Europe <- spTransform(Europe, CRS(new_proj))
 save(Europe, file="gridConstruct/inst/Europe.RData")
