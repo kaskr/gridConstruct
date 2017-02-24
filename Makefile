@@ -25,3 +25,17 @@ pdf:
 
 shp-update:
 	R --slave < shp-update.R
+
+## Get map data from OpenStreetMapData
+## ODbL 1.0 license:
+## You are free:
+##      To Share (copy, distribute and use the database)
+##      Create (To produce works from the database)
+##      Adapt (To modify, transform and build upon the database)
+## As long as you:
+##      Attribute, Share-Alike, Keep open.
+land-polygons-complete-4326.zip:
+	wget http://data.openstreetmapdata.com/land-polygons-complete-4326.zip
+
+land-polygons-complete-4326: land-polygons-complete-4326.zip
+	unzip land-polygons-complete-4326.zip
