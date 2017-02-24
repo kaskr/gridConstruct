@@ -39,3 +39,18 @@ land-polygons-complete-4326.zip:
 
 land-polygons-complete-4326: land-polygons-complete-4326.zip
 	unzip land-polygons-complete-4326.zip
+
+TM_WORLD_BORDERS-0.3.zip:
+	wget http://www.thematicmapping.org/downloads/TM_WORLD_BORDERS-0.3.zip
+
+TM_WORLD_BORDERS-0.3: TM_WORLD_BORDERS-0.3.zip
+	mkdir TM_WORLD_BORDERS-0.3
+	cd TM_WORLD_BORDERS-0.3; unzip ../TM_WORLD_BORDERS-0.3.zip
+
+## GPL !!! :)
+gshhg-shp-2.3.6.zip:
+	wget https://www.ngdc.noaa.gov/mgg/shorelines/data/gshhg/latest/gshhg-shp-2.3.6.zip
+
+gshhg-shp-2.3.6: gshhg-shp-2.3.6.zip
+	mkdir gshhg-shp-2.3.6
+	cd gshhg-shp-2.3.6; unzip ../gshhg-shp-2.3.6.zip
