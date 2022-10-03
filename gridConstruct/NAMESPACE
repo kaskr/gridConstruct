@@ -7,6 +7,13 @@ exportPattern(".")
 ## S3 register
 S3method(as.polygons, polygonGrid)
 S3method(summary, polygons)
+S3method(image, polygonGrid)
+S3method(image, polygons)
+S3method(plot, polygonGrid)
+S3method(plot, polygons)
+S3method(as.data.frame, polygonGrid)
+S3method(print, polygons)
+S3method(print, triangles)
 
 # Import all packages listed as Imports or Depends
 import(
